@@ -1,0 +1,366 @@
+/* Definition of variables */
+:root {
+  --color-base: #9d76e5;
+  --color-base-5: rgba(--color-base, .05); /* not used below */
+  --color-base-10: rgba(--color-base, .1); /* not used below */
+  --color-base-20: rgba(--color-base, .2); /* not used below */
+  --color-base-50: rgba(--color-base, .5); /* not used below */
+  --color-base-75: #b294eb; /* rgba(--color-base, .75); */
+  --color-base-80: #c2a9ef; /* rgba(--color-base, .8); */
+  --color-base-85: #d1bff3;/* rgba(--color-base, .85);  */
+  --color-base-90: #e0d4f7; /* rgba(--color-base, .9); */
+  --color-base-95: #f0eafb; /* rgba(--color-base, .95); */
+  --accent: #8c60db; /* #6610f2; */
+  --active: #5121ab;
+  --light: #d4c4f2;
+}
+
+
+/* H5P Core */
+.h5p-confirmation-dialog-header {
+  color: var(--color-base);
+}
+
+button {
+  &.h5p-core-button {
+    background: var(--color-base);
+    color: var(--color-text, #fff);
+
+    &:link,
+    &:visited {
+      background: var(--color-base);
+      color: var(--color-text, #fff);
+    }
+
+    &:hover {
+      background: var(--accent); /* var(--color-base-85); */
+      color: var(--color-text, #fff);
+    }
+
+    &:focus {
+      background: var(--accent); /* var(--color-base-85); */
+      color: var(--color-text, #fff);
+    }
+
+    &:active {
+      background: var(--active); /* var(--color-base-80); */
+      color: var(--color-text, #fff);
+    }
+  }
+}
+
+/* Joubel-UI */
+.h5peditor .ui-dialog .h5p-joubelui-button,
+.h5p-joubelui-button {
+  background: var(--color-base);
+  color: var(--color-text, #fff);
+
+  &:hover,
+  &:focus {
+    background: var(--accent); /* var(--color-base-85); */
+    color: var(--color-text, #fff);
+  }
+
+  &:active {
+    background: var(--active); /* var(--color-base-80); */
+    box-shadow: inset 0 4px 0 var(--color-base-75);
+    color: var(--color-text, #fff);
+  }
+}
+
+.joubel-simple-rounded-button {
+  background: var(--color-base);
+  color: var(--color-text, #fff);
+
+  &:hover,
+  &:focus {
+    background: var(--accent); /* var(--color-base-85); */
+    color: var(--color-text, #fff);
+  }
+
+  &:active {
+    background: var(--active); /* var(--color-base-80); */
+    box-shadow: inset 0 4px 0 var(--color-base-75);
+    color: var(--color-text, #fff);
+  }
+}
+
+.h5p-joubelui-score-bar .joubel-tip-container {
+  color: var(--color-base);
+}
+
+.h5p-joubelui-progressbar-background {
+  background-color: var(--color-base-80);
+}
+
+/* H5P.Audio */
+.h5p-audio-inner .h5p-audio-minimal-button {
+  background: var(--color-base);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--color-base)), color-stop(100%, var(--color-base-90)));
+  background: -webkit-linear-gradient(top, var(--color-base) 0%, var(--color-base-90) 100%);
+  color: var(--color-text, #fff);
+}
+
+/* H5P.CoursePresentation (I changed  var(--color-base-90) for var(--light) */
+.h5p-course-presentation {
+  .h5p-progressbar .h5p-progressbar-part-show {
+    background: var(--color-base);
+    background-image: -webkit-linear-gradient(top, var(--color-base), var(--light));
+    background-image: -moz-linear-gradient(top, var(--color-base), var(--light));
+    background-image: linear-gradient(to bottom, var(--color-base), var(--light));
+  }
+
+  .h5p-element-button {
+    background: var(--color-base);
+    border-color: var(--light);
+    color: var(--color-text, #fff);
+
+    &:hover {
+      background: var(--accent); /* var(--color-base-85); */
+      border-color: var(--color-base);
+    }
+  }
+
+  .h5p-keywords-wrapper > [role=menu] {
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-base);
+
+      &:hover {
+        background: var(--accent); /* var(--color-base-85); */
+      }
+    }
+
+    &> [role=menuitem]:hover span {
+      color: var(--color-base);
+    }
+  }
+
+  .h5p-element .h5p-element-outer::-webkit-scrollbar-thumb,
+  .h5p-element .h5p-element-outer .h5p-element-inner::-webkit-scrollbar-thumb,
+  .h5p-summary-table-pages::-webkit-scrollbar-thumb {
+    background: var(--color-base);
+
+    &:hover {
+      background: var(--accent); /* var(--color-base-85); */
+    }
+  }
+}
+
+/* H5P.DocumentationTool */
+.h5p-documentation-tool-nav-button {
+  &:before {
+    color: var(--color-text, #fff);
+  }
+
+  &.next:before {
+    color: var(--color-text, #fff);
+  }
+}
+
+/* H5P.FreeTextQuestion */
+.h5p-free-text-question-text-wrapper {
+  background: var(--color-base);
+  color: var(--color-text, #fff);
+}
+
+/* H5P.GuessTheAnswer */
+.h5p-guess-answer .show-solution-button {
+  background-color: var(--color-base);
+  color: var(--color-text, #fff);
+
+  &:hover,
+  &:focus {
+    background: var(--accent); /* var(--color-base-85); */
+  }
+
+  &:active {
+    background: var(--active); /* var(--color-base-80); */
+    box-shadow: inset 0 4px 0 var(--color-base-75);
+  }
+}
+
+/* H5P.GoToQuestion */
+.h5p-gotoquestion-text {
+  background: var(--color-base);
+  color: var(--color-text, #fff)
+}
+
+.h5p-gotoquestion-button[aria-disabled=false]:hover,
+.h5p-gotoquestion-button[aria-disabled=false]:focus {
+  color: var(--color-base);
+
+  &:after {
+    border-bottom-color: var(--color-base);
+  }
+}
+
+/* H5P.MemoryGame */
+.h5p-memory-reset {
+  background: var(--color-base);
+  color: var(--color-text, #fff);
+
+  &:hover,
+  &:focus {
+    background: var(--accent); /* var(--color-base-85); */
+  }
+}
+
+/* H5P.OpenEndedQuestion */
+.h5p-questionnaire .h5p-open-ended-question-question {
+  background: var(--color-base);
+  color: var(--color-text, #fff);
+}
+
+/* H5P.Question */
+.h5p-question-feedback {
+  color: var(--color-base);
+}
+
+/* H5P.Questionnaire */
+/* #0c9bfc is 180 degree turned HUE of default #ff6b00, etc. */
+.h5p-questionnaire-submit-screen {
+  background: var(--color-base);
+  color: var(--color-text, #fff);
+
+  .h5p-questionnaire-button.previous {
+    color: var(--color-text, #fff);
+    border-color: var(--color-text, #fff);
+
+    &:hover {
+      background-color: var(--accent); /* var(--color-base-85); */
+    }
+
+    &:active {
+      background-color: var(--active); /* var(--color-base-80); */
+    }
+  }
+}
+
+.h5p-questionnaire-success {
+  background: var(--color-base);
+  color: var(--color-text, #fff);
+}
+
+.h5p-questionnaire-button.submit {
+  background: var(--color-base);
+  border-color: var(--color-base);
+  filter: hue-rotate(180deg);
+
+  &:hover {
+    background-color: var(--accent); /* var(--color-base-85); */
+  }
+
+  &:active {
+    background-color: var(--active); /* var(--color-base-80); */
+  }
+}
+
+.h5p-questionnaire-progress-bar-widget {
+  background-color: var(--color-text, #fff);
+}
+
+.h5p-questionnaire-progress-bar-current {
+  background: var(--color-base);
+  filter: hue-rotate(180deg);
+}
+
+.h5p-questionnaire-progress-bar-widget-current {
+  color: var(--color-base);
+  filter: hue-rotate(180deg);
+}
+
+/* H5P.QuestionSet */
+.questionset .progress-dot {
+  &.answered {
+    background: var(--color-base);
+  }
+
+  &.current {
+    background: var(--active); /* var(--color-base-80); */
+  }
+}
+.progress-dot, .progress-dot.current:before, .progress-dot.answered {
+  border-color: var(--accent);/* var(--color-base-85); */
+}
+a.progress-dot.answered::before {
+  border-color: var(--accent);/* var(--color-base-85); */
+}
+
+/* H5P.SimpleMultipleChoice */
+.h5p-questionnaire .h5p-simple-multiple-choice-question {
+  background: var(--color-base);
+  color: var(--color-text, #fff);
+}
+
+.h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container {
+    color: var(--accent); /* var(--color-base-85); */
+    background: var(--color-base-90);
+    border: 2px solid var(--color-base);
+    box-shadow: none;
+}
+
+
+/* H5P.SingleChoiceSet */
+.h5p-single-choice-set .h5p-joubelui-progressbar-background {
+  background-color: var(--color-base);
+}
+
+/* H5P.Timeline */
+.h5p-timeline .vco-storyjs a {
+  color: var(--color-base) !important;
+
+  &:hover,
+  &:active {
+    color: var(--color-base-85) !important;
+  }
+}
+
+.h5p-timeline .vco-timeline .vco-navigation {
+  .timenav-background .timenav-line {
+    background-color: var(--color-base) !important;
+  }
+
+  .timenav .content .marker {
+    &.active {
+      .flag .flag-content h3,
+      .flag-small .flag-content h3 {
+        color: var(--color-base) !important;
+      }
+
+      .dot,
+      .line {
+        background: var(--color-base) !important;
+      }
+    }
+
+    .line .event-line {
+      background: var(--color-base) !important;
+    }
+  }
+}
+
+/* Image Choice */
+.h5p-multi-media-choice .h5p-multi-media-choice-enabled:hover:not(.h5p-multi-media-choice-selected) {
+    border-color: var(--color-base);
+}
+.h5p-multi-media-choice .h5p-multi-media-choice-enabled:hover:not(.h5p-multi-media-choice-selected):after {
+    background-color: var(--color-base);
+    opacity: .15;
+}
+
+
+/* Drag the words */
+
+.h5p-drag-text [aria-dropeffect] {
+    background-color: var(--light);
+}
+.h5p-drag-text [aria-grabbed='true'], .h5p-drag-text [aria-grabbed].h5p-drag-dropped:not(.ui-state-disabled):hover, .h5p-drag-text [aria-grabbed]:not(.ui-state-disabled):hover {
+    border: 0.1em solid var(--color-base-80);
+    color: var(--accent);
+    background: #fdcedd;
+}
+.h5p-drag-text [aria-grabbed].h5p-drag-dropped {
+    color: var(--accent);
+    border: 0.1em solid var(--color-base-80);
+    background: var(--light);
+}
